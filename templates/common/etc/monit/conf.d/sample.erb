@@ -1,0 +1,6 @@
+check process <%= @process %> with pidfile <%= @pidfile %>
+  start program = "<%= @start_command %>"
+  stop program = "<%= @end_command %>"
+  <% if @rules %>
+    <%= @rules.join("\n") %>
+  <% end %>
