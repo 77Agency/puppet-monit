@@ -4,7 +4,7 @@ class monit inherits monit::params {
     group   => 'root',
     mode    => '0644',
     alias   => 'monit',
-    source  => "puppet:///modules/monit/${::lsbdistcodename}/etc/default/monit",
+    source  => "puppet:///modules/monit/common/etc/default/monit",
     notify  => Service['monit'],
     require => Package['monit'],
   }

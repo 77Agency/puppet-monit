@@ -3,7 +3,7 @@ define monit::custom_service($name,$process, $pidfile, $start_command, $end_comm
     owner   => 'root',
     group   => 'root',
     mode    => '0644',
-    content => template("monit/common/etc/monit/conf.d/sample.erb")
+    content => template("monit/common/etc/monit/conf.d/sample.erb"),
     notify  => Service['monit'],
     require => [
       File['conf.d'],
